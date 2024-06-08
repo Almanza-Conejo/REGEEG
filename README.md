@@ -32,3 +32,50 @@ $$
         s_2\left(t\right)
     \end{bmatrix},
 $$
+
+then, the angular vector $\phi(t)$ is computed by
+
+$$
+    \phi\left(t\right) = \arccos\left(\frac{s_1\left(t\right)}{\sqrt{s_1^2\left(t\right)+s_2^2\left(t\right)}}\right),
+$$
+
+to apply a forward difference between the samples  $\phi(t)$ and $\phi(t+1)$ in discrete time as
+
+$$
+    \theta\left(t\right) = \Delta \phi(t) = \phi\left(t+1\right)-\phi\left(t\right),
+$$
+
+Then, we can compute the rotation matrix $R\left(t\right)$ and direction vector $d\left(t\right)$ are computed as follows
+
+$$
+  \begin{align}
+    R\left(t\right) &= \begin{bmatrix}
+        \cos\left(\theta\left(t\right)\right) & -\sin\left(\theta\left(t\right)\right) \\
+        \sin\left(\theta\left(t\right)\right) & ~\;\cos\left(\theta\left(t\right)\right)
+    \end{bmatrix}, \\
+    d\left(t\right) &= \begin{bmatrix}
+        d_x\left(t\right)\\
+        d_y\left(t\right)
+    \end{bmatrix} = p\left(t+1\right)-R\left(t\right)\times p\left(t\right).
+\end{align}
+$$
+
+Consequently, the direction vector $d(t)$ can be explicitly rewritten as
+
+$$
+  d(t) =
+      \begin{bmatrix}
+          s_1\left(t+1\right)\\
+          s_2\left(t+1\right)
+      \end{bmatrix}
+      -
+      \begin{bmatrix}
+          \cos\left(\theta\left(t\right)\right) & -\sin\left(\theta\left(t\right)\right) \\
+          \sin\left(\theta\left(t\right)\right) & \cos\left(\theta\left(t\right)\right)
+      \end{bmatrix} \times \begin{bmatrix}
+          s_1\left(t\right) \\
+          s_2\left(t\right)
+      \end{bmatrix},
+  $$
+
+  Then, natural logarithmic power spectrum for the $\theta\left(t\right)$ and $d(t)$ signals is computed using the [spectrum MATLAB function](https://www.mathworks.com/help/signal/ref/pspectrum.html)
