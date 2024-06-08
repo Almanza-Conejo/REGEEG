@@ -20,7 +20,7 @@
 
 # REGEEG
 
-This is a copy example of our research proposal REGEEG. The code is written by M. E. Oscar Almanza-Conejo, PhD. Juan-Gabriel Avina-Cervantes, PhD. Arturo Garcia-Perez, and PhD. Mario-Alberto Ibarra-Manzano. The main code is stored on our code folder and it is not allowed to be shared or used for commercial purposes.
+This is a copy example of our research proposal REGEEG. The code is written by M. E. Oscar Almanza-Conejo, PhD. Juan-Gabriel Avina-Cervantes, PhD. Arturo Garcia-Perez, and PhD. Mario-Alberto Ibarra-Manzano. The main code is stored on our [code](https://github.com/Almanza-Conejo/REGEEG/tree/main/code) folder and it is not allowed to be shared or used for commercial purposes.
 If you want to know more about this implementation, please see our published framework "REGEEG: A Regression-based EEG Signal Processing in Emotion Recognition"
 
 ## REGEEG algorithm
