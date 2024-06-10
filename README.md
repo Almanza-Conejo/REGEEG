@@ -124,7 +124,7 @@ and using the diagonal eigenvalues matrix,
         \sigma_1\left(t\right) & 0 & 0\\
         0 & \sigma_2\left(t\right) & 0 \\
         0 & 0 & \sigma_3\left(t\right)
-    \end{array} \right].
+    \end{array} \right],
 ```
 
 as feature extraction conducted by computing discriminant statistics on the signals $\sigma_1\left(t\right)$ and $\sigma_3\left(t\right)$ as the mean, variance, median, mode, kurtosis, and skewness. 
