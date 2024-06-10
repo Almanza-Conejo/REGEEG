@@ -26,28 +26,28 @@ If you want to know more about this implementation, please see our published fra
 ## REGEEG algorithm
 The proposed REGEEG method develops the signal processing per subject using a $24$ EEG pair of electrodes. A signal pre- and post-processing is applied to each input signal (originally developed for EEGs) from a dataset. This method applies a windowing analysis to input data length to a two-element subset from input data, yielding $s_1(t) = \tau^i_1$ and $s_2(t) = \tau^i_2$ where $\tau$ is the pair information from input data, stored as
 
-$$
+```math
   p\left(t\right)=\begin{bmatrix}
         s_1\left(t\right) \\
         s_2\left(t\right)
     \end{bmatrix},
-$$
+```
 
 then, the angular vector $\phi(t)$ is computed by
 
-$$
+```math
     \phi\left(t\right) = \arccos\left(\frac{s_1\left(t\right)}{\sqrt{s_1^2\left(t\right)+s_2^2\left(t\right)}}\right),
-$$
+```
 
 to apply a forward difference between the samples  $\phi(t)$ and $\phi(t+1)$ in discrete time as
 
-$$
+```math
     \theta\left(t\right) = \Delta \phi(t) = \phi\left(t+1\right)-\phi\left(t\right),
-$$
+```
 
 Then, we can compute the rotation matrix $R\left(t\right)$ and direction vector $d\left(t\right)$ are computed as follows
 
-$$
+```math
   \begin{align}
     R\left(t\right) &= \begin{bmatrix}
         \cos\left(\theta\left(t\right)\right) & -\sin\left(\theta\left(t\right)\right) \\
@@ -58,11 +58,11 @@ $$
         d_y\left(t\right)
     \end{bmatrix} = p\left(t+1\right)-R\left(t\right)\times p\left(t\right).
 \end{align}
-$$
+```
 
 Consequently, the direction vector $d(t)$ can be explicitly rewritten as
 
-$$
+```math
   d(t) =
       \begin{bmatrix}
           s_1\left(t+1\right)\\
@@ -76,7 +76,7 @@ $$
           s_1\left(t\right) \\
           s_2\left(t\right)
       \end{bmatrix},
-  $$
+  ```
 
   Then, natural logarithmic power spectrum for the $\theta\left(t\right)$ and $d(t)$ signals is computed using the [spectrum MATLAB function](https://www.mathworks.com/help/signal/ref/pspectrum.html) following the 
 
