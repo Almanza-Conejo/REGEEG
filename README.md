@@ -75,14 +75,14 @@ Consequently, the direction vector $d(t)$ can be explicitly rewritten as
       \end{bmatrix} \times \begin{bmatrix}
           s_1\left(t\right) \\
           s_2\left(t\right)
-      \end{bmatrix},
+      \end{bmatrix}.
   ```
 
   Then, natural logarithmic power spectrum for the $\theta\left(t\right)$ and $d(t)$ signals is computed using the [spectrum MATLAB function](https://www.mathworks.com/help/signal/ref/pspectrum.html) following the 
 
 ```math
     \text{PS}(f) =  \mathcal{F}\lbrace R_{xx}(\tau)\rbrace\\
-    =  \int\limits_{-\infty}^{\infty} \left\{ \lim_{\eta \to \infty} \frac{1}{\eta} \int\limits_{0}^{\eta} x^{\ast}_j\left(t-\tau\right) x_j\left(t\right) dt \right\} \mathrm{e}^{-i2\pi f\tau} d\tau,
+    =  \int\limits_{-\infty}^{\infty} \left\{ \lim_{\eta \to \infty} \frac{1}{\eta} \int\limits_{0}^{\eta} x^{\ast}_j\left(t-\tau\right) x_j\left(t\right) dt \right\} \mathrm{e}^{-i2\pi f\tau} d\tau.
 ```
 
 Hence, firts polynomial features are computed based on a $\vartheta\left(f\right) = \ln(\text{PS}(f))$ using the frequency vector assosiated to the PS as
@@ -100,7 +100,7 @@ Hence, firts polynomial features are computed based on a $\vartheta\left(f\right
         \omega_{\varpi}^{n} & \omega_{\varpi}^{n-1} & \dots & 1
     \end{bmatrix} \times \begin{bmatrix}
         a_n \\ a_{n-1} \\ \vdots \\ a_{0}
-    \end{bmatrix}.
+    \end{bmatrix},
 ```
 
 achieving each $\mathbf{a}=[a_n \; a_{n-1} \; \ldots \; a_{0}]^\intercal$ polynomial coefficients vector from $\theta(t)$ and $d(t)$ as a new feature attribute.
@@ -113,7 +113,7 @@ Finally, statistical features are computed using the Single Value Decomposition 
     = \begin{bmatrix}
         R(t) & d(t) \\
         \mathbf{0} & 1 \\ 
-    \end{bmatrix}
+    \end{bmatrix},
 ```
 
 and using the diagonal eigenvalues matrix,
