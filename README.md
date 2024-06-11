@@ -7,7 +7,7 @@
     M.E. Almanza-Conejo</h2>
     <br>
     <a href="https://www.linkedin.com/in/oalmanzaconejo/" rel="nofollow noreferrer">
-    <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedIn"> LinkedIn
+    <img src="https://i.sstatic.net/gVE0j.png" alt="linkedIn"> LinkedIn
     </a> &nbsp; 
     <a href="https://www.researchgate.net/profile/Oscar-Almanza-Conejo" rel="nofollow noreferrer">
     <img src="https://user-images.githubusercontent.com/54937357/126514422-ba0e7de1-cbc2-4186-94d9-39e8a22c1c78.png" width="14" height="14" alt="ResearchGate"> ResearchGate
